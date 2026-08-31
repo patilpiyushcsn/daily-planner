@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>120 — Life Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard"><span>120</span><small>DAY LIFE PLAN</small></a>
+        <nav aria-label="Plan categories">
+          <button class="nav-item active" data-view="dashboard"><i>◫</i> Dashboard</button>
+          <p class="nav-label">Pillars</p>
+          <button class="nav-item" data-view="career"><i>↗</i> Career</button>
+          <button class="nav-item" data-view="german"><i>ä</i> German</button>
+          <button class="nav-item" data-view="content"><i>▶</i> Content</button>
+          <button class="nav-item" data-view="fitness"><i>✦</i> Fitness</button>
+          <button class="nav-item" data-view="health"><i>♡</i> Health</button>
+          <p class="nav-label">Review</p>
+          <button class="nav-item" data-view="weekly"><i>⌁</i> Weekly review</button>
+        </nav>
+        <div class="sidebar-foot">Consistency over perfection.</div>
+      </aside>
+
+      <main>
+        <header>
+          <div><p class="eyebrow" id="dateLabel"></p><h1 id="viewTitle">Your dashboard</h1></div>
+          <label class="date-picker">Log date <input id="logDate" type="date" /></label>
+        </header>
+        <section id="app"></section>
+      </main>
+    </div>
+    <template id="dashboardTemplate">
+      <section class="hero-card">
+        <div><p class="eyebrow">YOUR 4-MONTH RESET</p><h2>Build a life you can repeat.</h2><p>Track the few inputs that make the rest compound.</p></div>
+        <div class="ring-wrap"><div class="progress-ring"><span id="adherence">0%</span><small>today</small></div><p>Daily consistency</p></div>
+      </section>
+      <section class="metric-grid" id="metricGrid"></section>
+      <section class="split-section">
+        <div class="card"><div class="card-heading"><div><p class="eyebrow">THIS WEEK</p><h3>Weekly score</h3></div><strong id="weeklyScore">0%</strong></div><div class="week-bars" id="weekBars"></div><p class="muted">Aim for 85% consistency, not perfection.</p></div>
+        <div class="card"><p class="eyebrow">THE FLYWHEEL</p><h3>Protect your energy first.</h3><div class="flywheel"><span>Sleep</span><b>→</b><span>Energy</span><b>→</b><span>Fitness</span><b>→</b><span>Career</span><b>→</b><span>Confidence</span></div><p class="muted">Never trade your 8 hours of sleep for another task.</p></div>
+      </section>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
